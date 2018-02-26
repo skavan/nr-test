@@ -3,20 +3,27 @@
         "id": "4d7850ca.2f64b",
         "type": "tab",
         "label": "Receiver_Basement",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
         "id": "89e4bc6d.4caf5",
         "type": "tab",
         "label": "Receiver_Family Room",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
         "id": "4757eb73.c56844",
         "type": "tab",
         "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ac94cdc.1e2203",
+        "type": "tab",
+        "label": "Flow 2",
         "disabled": false,
         "info": ""
     },
@@ -50,6 +57,19 @@
     },
     {
         "id": "8c73cb13.c11298",
+        "type": "tls-config",
+        "z": "",
+        "name": "acu_samsung",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "ac_access.crt",
+        "keyname": "ac_access_nopwd.key",
+        "caname": "certificate.cer",
+        "verifyservercert": false
+    },
+    {
+        "id": "a328c8d3.7533b8",
         "type": "tls-config",
         "z": "",
         "name": "acu_samsung",
@@ -1026,5 +1046,348 @@
                 "e19f98f4.7b28f8"
             ]
         ]
+    },
+    {
+        "id": "2934b6b0.90228a",
+        "type": "http request",
+        "z": "ac94cdc.1e2203",
+        "name": "ACU request",
+        "method": "use",
+        "ret": "obj",
+        "url": "",
+        "tls": "a328c8d3.7533b8",
+        "x": 790,
+        "y": 320,
+        "wires": [
+            [
+                "56f95f05.1c8b4",
+                "928c2273.73a2d"
+            ]
+        ]
+    },
+    {
+        "id": "f376e05b.ecc14",
+        "type": "debug",
+        "z": "ac94cdc.1e2203",
+        "name": "http output",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "status",
+        "x": 1090,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "619e2280.2c7e6c",
+        "type": "function",
+        "z": "ac94cdc.1e2203",
+        "name": "HTTP headers",
+        "func": "\nmsg.headers = {};\n\nmsg.headers[\"content-type\"] = \"application/json\";\nmsg.headers[\"authorization\"] = \"Bearer RF9UT3pZW0\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 620,
+        "y": 320,
+        "wires": [
+            [
+                "2934b6b0.90228a"
+            ]
+        ]
+    },
+    {
+        "id": "56f95f05.1c8b4",
+        "type": "change",
+        "z": "ac94cdc.1e2203",
+        "name": "set status",
+        "rules": [
+            {
+                "t": "set",
+                "p": "status.uuid",
+                "pt": "msg",
+                "to": "payload.Devices[0].uuid",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "status.power",
+                "pt": "msg",
+                "to": "payload.Devices[0].Operation.power",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "status.mode",
+                "pt": "msg",
+                "to": "payload.Devices[0].Mode.modes",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "status.options.comode",
+                "pt": "msg",
+                "to": "$split(payload.Devices[0].Mode.options[0], \"_\", limit)[1]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "status.options.sleep",
+                "pt": "msg",
+                "to": "$split(payload.Devices[0].Mode.options[1], \"_\", limit)[1]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "status.options.autoclean",
+                "pt": "msg",
+                "to": "$split(payload.Devices[0].Mode.options[2], \"_\", limit)[1]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "status.options.spi",
+                "pt": "msg",
+                "to": "$split(payload.Devices[0].Mode.options[3], \"_\", limit)[1]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "status.temperatures.current",
+                "pt": "msg",
+                "to": "payload.Devices[0].Temperatures.current",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "status.temperatures.desired",
+                "pt": "msg",
+                "to": "payload.Devices[0].Temperatures.desired",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "status.temperatures.unit",
+                "pt": "msg",
+                "to": "payload.Devices[0].Temperatures.unit",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "status.wind.direction",
+                "pt": "msg",
+                "to": "payload.Devices[0].Wind.direction",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "status.wind.speedLevel",
+                "pt": "msg",
+                "to": "payload.Devices[0].Wind.speedLevel",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 320,
+        "wires": [
+            [
+                "f376e05b.ecc14"
+            ]
+        ]
+    },
+    {
+        "id": "b1591df5.de102",
+        "type": "config",
+        "z": "ac94cdc.1e2203",
+        "name": "device config",
+        "properties": [
+            {
+                "p": "deviceConfig",
+                "pt": "flow",
+                "to": "{\"general\":{\"url\":\"https://192.168.2.50:8888\"},\"commands\":{\"status\":{\"method\":\"GET\",\"url\":\"%base%/devices\"},\"power\":{\"method\":\"PUT\",\"url\":\"%base%/devices/0\",\"availableValues\":[\"On\",\"Off\"],\"template\":\"{\\\"Operation\\\" : { \\\"power\\\" : \\\"%value%\\\" }}\"},\"mode\":{\"method\":\"PUT\",\"url\":\"%base%/devices/0/mode\",\"availableValues\":[\"Cool\",\"Dry\",\"Wind\",\"Auto\"],\"template\":\"{\\\"Mode\\\" : { \\\"modes\\\" : [\\\"%value%\\\"] }}\"},\"opt_comode\":{\"method\":\"PUT\",\"url\":\"%base%/devices/0\",\"availableValues\":[\"Off\",\"Sleep\",\"Speed\",\"2Step\",\"Comfort\",\"Quiet\",\"Smart\"],\"template\":\"{\\\"Mode\\\" : { \\\"options\\\" : [\\\"Comode_%value%\\\"] }}\"},\"opt_clean\":{\"method\":\"PUT\",\"url\":\"%base%/devices/0\",\"availableValues\":[\"On\",\"Off\"],\"template\":\"{\\\"Mode\\\" : { \\\"options\\\" : [\\\"Sleep_%value%\\\"] }}\"},\"opt_purify\":{\"method\":\"PUT\",\"url\":\"%base%/devices/0\",\"availableValues\":[\"On\",\"Off\"],\"template\":\"{\\\"Mode\\\" : { \\\"options\\\" : [\\\"Spi_%value%\\\"] }}\"},\"temp_desired\":{\"method\":\"PUT\",\"url\":\"%base%/devices/0/temperatures/0\",\"template\":\"{\\\"Temperatures\\\" : [{ \\\"desired\\\" : %value% }]}\"},\"temp_unit\":{\"method\":\"PUT\",\"url\":\"%base%/devices/0/temperatures/0\",\"availableValues\":[\"Celsius\",\"Fahrenheit\"],\"template\":\"{\\\"Temperatures\\\" : [{ \\\"unit\\\" : \\\"%value%\\\" }]}\"},\"wind_direction\":{\"method\":\"PUT\",\"url\":\"%base%/devices/0/wind\",\"availableValues\":[\"Fix\",\"UpAndLow\",\"LeftAndRight\",\"All\"],\"template\":\"{\\\"Wind\\\" : { \\\"direction\\\" : \\\"%value%\\\" }}\"},\"wind_speed\":{\"method\":\"PUT\",\"url\":\"%base%/devices/0/wind\",\"availableValues\":[{\"Auto\":0},{\"Low\":1},{\"Medium\":2},{\"High\":3},{\"Turbo\":4}],\"template\":\"{\\\"Wind\\\" : { \\\"speedLevel\\\" : %value% }}\"}}}",
+                "tot": "json"
+            }
+        ],
+        "active": true,
+        "x": 130,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "cb928aeb.f2da78",
+        "type": "comment",
+        "z": "ac94cdc.1e2203",
+        "name": "manual entry",
+        "info": "",
+        "x": 130,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "1b837fb2.1eb1d",
+        "type": "inject",
+        "z": "ac94cdc.1e2203",
+        "name": "",
+        "topic": "",
+        "payload": "status",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 110,
+        "y": 220,
+        "wires": [
+            [
+                "d46df305.a33cf"
+            ]
+        ]
+    },
+    {
+        "id": "d46df305.a33cf",
+        "type": "function",
+        "z": "ac94cdc.1e2203",
+        "name": "parse command",
+        "func": "let deviceConfig = flow.get('deviceConfig');\nlet baseUrl = deviceConfig.general.url;\nlet command = msg.payload.split(\"|\")[0];\nlet commandValue = msg.payload.split(\"|\").length > 1 ? msg.payload.split(\"|\")[1] : undefined;\n\nlet method = deviceConfig.commands[command].method;\nlet payload;\n\nif (commandValue && method === \"PUT\") {\n    // probably need to add check if value is correct\n    payload = deviceConfig.commands[command].template.replace(\"%value%\", commandValue);\n}\n\nmsg.method = method;\nmsg.url = deviceConfig.commands[command].url.replace(\"%base%\", baseUrl);\nmsg.payload = payload;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 320,
+        "wires": [
+            [
+                "619e2280.2c7e6c"
+            ]
+        ]
+    },
+    {
+        "id": "8b003d4e.6b72c",
+        "type": "inject",
+        "z": "ac94cdc.1e2203",
+        "name": "",
+        "topic": "",
+        "payload": "power|On",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 120,
+        "y": 260,
+        "wires": [
+            [
+                "d46df305.a33cf"
+            ]
+        ]
+    },
+    {
+        "id": "358024af.ef391c",
+        "type": "inject",
+        "z": "ac94cdc.1e2203",
+        "name": "",
+        "topic": "",
+        "payload": "power|Off",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 120,
+        "y": 300,
+        "wires": [
+            [
+                "d46df305.a33cf"
+            ]
+        ]
+    },
+    {
+        "id": "934fc1be.0d99",
+        "type": "inject",
+        "z": "ac94cdc.1e2203",
+        "name": "",
+        "topic": "",
+        "payload": "mode|Cool",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 120,
+        "y": 340,
+        "wires": [
+            [
+                "d46df305.a33cf"
+            ]
+        ]
+    },
+    {
+        "id": "e1656a71.0695b8",
+        "type": "inject",
+        "z": "ac94cdc.1e2203",
+        "name": "",
+        "topic": "",
+        "payload": "mode|Auto",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 120,
+        "y": 380,
+        "wires": [
+            [
+                "d46df305.a33cf"
+            ]
+        ]
+    },
+    {
+        "id": "382c5c1b.4d4994",
+        "type": "inject",
+        "z": "ac94cdc.1e2203",
+        "name": "",
+        "topic": "",
+        "payload": "temp_desired|23",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 140,
+        "y": 420,
+        "wires": [
+            [
+                "d46df305.a33cf"
+            ]
+        ]
+    },
+    {
+        "id": "b5b2bd61.21165",
+        "type": "inject",
+        "z": "ac94cdc.1e2203",
+        "name": "",
+        "topic": "",
+        "payload": "wind_speed|2",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 130,
+        "y": 460,
+        "wires": [
+            [
+                "d46df305.a33cf"
+            ]
+        ]
+    },
+    {
+        "id": "928c2273.73a2d",
+        "type": "debug",
+        "z": "ac94cdc.1e2203",
+        "name": "from acu",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 950,
+        "y": 240,
+        "wires": []
     }
 ]
