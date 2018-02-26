@@ -1,0 +1,1030 @@
+[
+    {
+        "id": "4d7850ca.2f64b",
+        "type": "tab",
+        "label": "Receiver_Basement",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "89e4bc6d.4caf5",
+        "type": "tab",
+        "label": "Receiver_Family Room",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "4757eb73.c56844",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "4ef4ad32.7045a4",
+        "type": "autobot-global-config",
+        "z": "",
+        "name": "dragon",
+        "deviceMap": "{\"avr\":{\"pio_2016\":{\"general\":{\"description\":\"A generic template for a pioneer AVR\",\"supported_models\":[\"AVR-EXAMPLE1\",\"AVR-EXAMPLE2\"]},\"config\":{\"interface\":\"tcp\",\"port\":23,\"prefix\":\"\",\"suffix\":\"\",\"delimiterOut\":\"\\r\",\"delimiterIn\":\"\\r\\n\",\"substitutionCharacter\":\"$\",\"messageDelay\":300},\"commands\":{\"device\":{\"deviceCommand\":\"\",\"deviceStatus\":\"\",\"deviceRequestStatus\":\"\",\"category\":\"main\",\"sph\":\"end\"},\"heartbeat\":{\"deviceCommand\":\"\",\"deviceStatus\":\"(^R$)|(^$)\",\"deviceRequestStatus\":\"\",\"category\":\"main\",\"sph\":\"end\"},\"power\":{\"deviceCommand\":\"P$\",\"deviceStatus\":\"(?:^PWR)(.)\",\"deviceRequestStatus\":\"?P\",\"category\":\"main\",\"commandMap\":[{\"deviceCode\":\"0\",\"outCode\":\"O\"},{\"deviceCode\":\"1\",\"outCode\":\"F\"}]},\"mute\":{\"deviceCommand\":\"M$\",\"deviceStatus\":\"(?:^MUT)(.)\",\"deviceRequestStatus\":\"?M\",\"category\":\"main\",\"commandMap\":[{\"deviceCode\":\"0\",\"outCode\":\"O\"},{\"deviceCode\":\"1\",\"outCode\":\"F\"}]},\"input\":{\"deviceCommand\":\"$$FN\",\"deviceStatus\":\"(?:^FN)(.*)\",\"deviceRequestStatus\":\"?F\",\"category\":\"main\"},\"surround\":{\"deviceCommand\":\"$$$$SR\",\"deviceStatus\":\"(?:^SR)(.*)\",\"deviceRequestStatus\":\"?S\",\"category\":\"main\"},\"surround lm\":{\"deviceCommand\":\"$$$$LM\",\"deviceStatus\":\"(?:^LM)(.*)\",\"deviceRequestStatus\":\"?L\",\"category\":\"main\"},\"volume\":{\"deviceCommand\":\"$$$VL\",\"deviceStatus\":\"(?:^VOL)(\\\\d+)\",\"deviceRequestStatus\":\"?V\",\"category\":\"main\"},\"volumedB\":{\"deviceCommand\":\"$$$VL\",\"deviceStatus\":\"(?:^VOL)(\\\\d+)\",\"deviceRequestStatus\":\"?V\",\"category\":\"main\",\"sph\":\"end\"},\"audio signal\":{\"deviceCommand\":\"\",\"deviceStatus\":\"(?:^AST)(.*)\",\"deviceRequestStatus\":\"?AST\",\"category\":\"audio\",\"advanced\":true},\"video signal\":{\"deviceCommand\":\"\",\"deviceStatus\":\"(?:^VST)(.*)\",\"deviceRequestStatus\":\"?VST\",\"category\":\"video\",\"advanced\":true},\"audio processing\":{\"deviceCommand\":\"$ATC\",\"deviceStatus\":\"(?:^ATC)(.)\",\"deviceRequestStatus\":\"?ATC\",\"category\":\"audio\"},\"audio compression\":{\"deviceCommand\":\"$ATL\",\"deviceStatus\":\"(?:^ATL)(.)\",\"deviceRequestStatus\":\"?ATL\",\"category\":\"audio\"},\"z2 power\":{\"deviceCommand\":\"AP$\",\"deviceStatus\":\"(?:^APR)(\\\\d*)\",\"deviceRequestStatus\":\"?AP\",\"category\":\"zone 2\",\"link\":\"zone power\",\"sph\":\"end\",\"commandMap\":[{\"deviceCode\":\"0\",\"outCode\":\"O\"},{\"deviceCode\":\"1\",\"outCode\":\"F\"}]},\"z2 input\":{\"deviceCommand\":\"$$ZS\",\"deviceStatus\":\"(?:^Z2F)(.*)\",\"deviceRequestStatus\":\"?ZS\",\"category\":\"zone 2\",\"link\":\"input\",\"sph\":\"end\"},\"z2 volumedB\":{\"deviceCommand\":\"$$ZV\",\"deviceStatus\":\"(?:^ZV)(\\\\d*)\",\"deviceRequestStatus\":\"?ZV\",\"category\":\"zone 2\",\"link\":\"zone volumedB\"},\"z2 volume\":{\"deviceCommand\":\"$$ZV\",\"deviceStatus\":\"(?:^ZV)(\\\\d*)\",\"deviceRequestStatus\":\"?ZV\",\"category\":\"zone 2\",\"link\":\"zone volume\",\"sph\":\"end\"},\"z2 mute\":{\"deviceCommand\":\"Z2M$\",\"deviceStatus\":\"(?:^Z2MUT)(.*)\",\"deviceRequestStatus\":\"?Z2M\",\"category\":\"zone 2\",\"link\":\"mute\",\"sph\":\"end\",\"commandMap\":[{\"deviceCode\":\"0\",\"outCode\":\"O\"},{\"deviceCode\":\"1\",\"outCode\":\"F\"}]},\"z3 power\":{\"deviceCommand\":\"BP$\",\"deviceStatus\":\"(?:^BPR)(\\\\d*)\",\"deviceRequestStatus\":\"?BP\",\"category\":\"zone 3\",\"link\":\"zone power\",\"sph\":\"end\",\"commandMap\":[{\"deviceCode\":\"0\",\"outCode\":\"O\"},{\"deviceCode\":\"1\",\"outCode\":\"F\"}]},\"z3 input\":{\"deviceCommand\":\"$$ZT\",\"deviceStatus\":\"(?:^Z3F)(.*)\",\"deviceRequestStatus\":\"?ZT\",\"category\":\"zone 3\",\"link\":\"input\",\"sph\":\"end\"},\"z3 volumedB\":{\"deviceCommand\":\"$$YV\",\"deviceStatus\":\"(?:^YV)(\\\\d*)\",\"deviceRequestStatus\":\"?YV\",\"category\":\"zone 3\",\"link\":\"zone volumedB\"},\"z3 volume\":{\"deviceCommand\":\"$$YV\",\"deviceStatus\":\"(?:^YV)(\\\\d*)\",\"deviceRequestStatus\":\"?YV\",\"category\":\"zone 3\",\"link\":\"zone volume\",\"sph\":\"end\"},\"z3 mute\":{\"deviceCommand\":\"Z3M$\",\"deviceStatus\":\"(?:^Z3MUT)(.*)\",\"deviceRequestStatus\":\"?Z3M\",\"category\":\"zone 3\",\"link\":\"mute\",\"sph\":\"end\",\"commandMap\":[{\"deviceCode\":\"0\",\"outCode\":\"O\"},{\"deviceCode\":\"1\",\"outCode\":\"F\"}]},\"z4 power\":{\"deviceCommand\":\"ZE$\",\"deviceStatus\":\"(?:^ZEP)(\\\\d*)\",\"deviceRequestStatus\":\"?ZEP\",\"category\":\"zone 4\",\"link\":\"mute\",\"sph\":\"end\",\"commandMap\":[{\"deviceCode\":\"0\",\"outCode\":\"O\"},{\"deviceCode\":\"1\",\"outCode\":\"F\"}]},\"z4 input\":{\"deviceCommand\":\"$$ZEA\",\"deviceStatus\":\"(?:^ZEA)(.*)\",\"deviceRequestStatus\":\"?ZEA\",\"category\":\"zone 4\",\"link\":\"input\",\"sph\":\"end\"},\"z4 volumedB\":{\"deviceCommand\":\"$$HZV\",\"deviceStatus\":\"(?:^HZV)(\\\\d*)\",\"deviceRequestStatus\":\"?HZV\",\"category\":\"zone 4\",\"link\":\"zone volumedB\"},\"z4 volume\":{\"deviceCommand\":\"$$HZV\",\"deviceStatus\":\"(?:^HZV)(\\\\d*)\",\"deviceRequestStatus\":\"?HZV\",\"category\":\"zone 4\",\"link\":\"zone volume\",\"sph\":\"end\"},\"z4 mute\":{\"deviceCommand\":\"HZM$\",\"deviceStatus\":\"(?:^HZMUT)(.*)\",\"deviceRequestStatus\":\"?HZM\",\"category\":\"zone 4\",\"link\":\"mute\",\"sph\":\"end\",\"commandMap\":[{\"deviceCode\":\"0\",\"outCode\":\"O\"},{\"deviceCode\":\"1\",\"outCode\":\"F\"}]},\"dpad\":{\"deviceCommand\":\"C$\",\"deviceStatus\":\"\",\"deviceRequestStatus\":\"\",\"category\":\"navigation\",\"link\":\"navigation\"},\"menu\":{\"deviceCommand\":\"$\",\"deviceStatus\":\"\",\"deviceRequestStatus\":\"\",\"category\":\"navigation\"},\"eraseTree\":{\"deviceCommand\":\"\",\"deviceStatus\":\"(^ERASETREE|^erasetree|eraseTree)\\\\s(.+)\",\"deviceRequestStatus\":\"\",\"category\":\"test\",\"sph\":\"end\"},\"UNKNOWN1\":{\"deviceCommand\":\"\",\"deviceStatus\":\"(^\\\\D+)(\\\\d+)\",\"deviceRequestStatus\":\"\",\"category\":\"unknown\",\"sph\":\"end\"},\"UNKNOWN2\":{\"deviceCommand\":\"\",\"deviceStatus\":\"(^.+)\",\"deviceRequestStatus\":\"\",\"category\":\"unknown\",\"sph\":\"end\"}},\"valuemaps\":{\"device\":[{\"deviceValue\":\"\",\"standardValue\":[\"STATUS\"],\"displayValue\":\"\",\"commandRequestGroup\":\"initial state\"}],\"power\":[{\"deviceValue\":1,\"standardValue\":[0,\"OFF\"],\"displayValue\":\"OFF\",\"commandRequestGroup\":\"power off\"},{\"deviceValue\":0,\"standardValue\":[1,\"ON\"],\"displayValue\":\"ON\",\"commandRequestGroup\":\"power on\"}],\"mute\":[{\"deviceValue\":1,\"standardValue\":[0,\"OFF\"],\"displayValue\":\"OFF\"},{\"deviceValue\":0,\"standardValue\":[1,\"ON\"],\"displayValue\":\"ON\"}],\"zone power\":[{\"deviceValue\":1,\"standardValue\":[0,\"OFF\"],\"displayValue\":\"OFF\",\"commandRequestGroup\":\"z2\",\"statusRequestGroup\":\"z2\",\"clear\":[\"zone 2\",\"zone 3\"]},{\"deviceValue\":0,\"standardValue\":[1,\"ON\"],\"displayValue\":\"ON\",\"commandRequestGroup\":\"z2\",\"statusRequestGroup\":\"z2\"}],\"input\":[{\"deviceValue\":\"19\",\"standardValue\":[7,\"INPUT11\",\"HDMI1\"],\"displayValue\":\"HDMI 1\",\"statusRequestGroup\":\"new input\"},{\"deviceValue\":\"20\",\"standardValue\":[8,\"INPUT12\",\"HDMI2\"],\"displayValue\":\"HDMI 2\",\"statusRequestGroup\":\"new input\"},{\"deviceValue\":\"21\",\"standardValue\":[9,\"INPUT13\",\"HDMI3\"],\"displayValue\":\"HDMI 3\",\"statusRequestGroup\":\"new input\"},{\"deviceValue\":\"22\",\"standardValue\":[10,\"INPUT14\",\"HDMI4\"],\"displayValue\":\"HDMI 4\",\"statusRequestGroup\":\"new input\"},{\"deviceValue\":\"04\",\"standardValue\":[2,\"INPUT2\",\"DVD\"],\"displayValue\":\"DVD\",\"statusRequestGroup\":\"new input\"},{\"deviceValue\":\"25\",\"standardValue\":[3,\"INPUT3\",\"BD\",\"BLURAY\"],\"displayValue\":\"BLU-RAY\",\"statusRequestGroup\":\"new input\"},{\"deviceValue\":\"05\",\"standardValue\":[4,\"INPUT4\",\"TV\"],\"displayValue\":\"TV\",\"statusRequestGroup\":\"new input\"},{\"deviceValue\":\"06\",\"standardValue\":[5,\"INPUT5\",\"SAT/CBL\",\"SAT\"],\"displayValue\":\"SAT/CBL\",\"statusRequestGroup\":\"new input\"},{\"deviceValue\":\"15\",\"standardValue\":[6,\"INPUT6\",\"DVR\"],\"displayValue\":\"DVR\",\"statusRequestGroup\":\"new input\"},{\"deviceValue\":\"19\",\"standardValue\":[7,\"INPUT11\",\"HDMI1\"],\"displayValue\":\"HDMI 1\",\"statusRequestGroup\":\"new input\"},{\"deviceValue\":\"20\",\"standardValue\":[8,\"INPUT12\",\"HDMI2\"],\"displayValue\":\"HDMI 2\",\"statusRequestGroup\":\"new input\"},{\"deviceValue\":\"21\",\"standardValue\":[9,\"INPUT13\",\"HDMI3\"],\"displayValue\":\"HDMI 3\",\"statusRequestGroup\":\"new input\"},{\"deviceValue\":\"22\",\"standardValue\":[10,\"INPUT14\",\"HDMI4\"],\"displayValue\":\"HDMI 4\",\"statusRequestGroup\":\"new input\"},{\"deviceValue\":\"23\",\"standardValue\":[11,\"INPUT15\",\"HDMI5\"],\"displayValue\":\"HDMI 5\",\"statusRequestGroup\":\"new input\"},{\"deviceValue\":\"24\",\"standardValue\":[12,\"INPUT16\",\"HDMI6\"],\"displayValue\":\"HDMI 6\",\"statusRequestGroup\":\"new input\"},{\"deviceValue\":\"01\",\"standardValue\":[1,\"INPUT1\",\"CD\"],\"displayValue\":\"CD\",\"statusRequestGroup\":\"new input\"}],\"navigation\":[{\"deviceValue\":\"UP\",\"standardValue\":[\"UP\"],\"displayValue\":\"UP\"},{\"deviceValue\":\"DN\",\"standardValue\":[\"DN\",\"DOWN\"],\"displayValue\":\"DOWN\"},{\"deviceValue\":\"LE\",\"standardValue\":[\"LE\",\"LEFT\"],\"displayValue\":\"LEFT\"},{\"deviceValue\":\"RI\",\"standardValue\":[\"RI\",\"RIGHT\"],\"displayValue\":\"RIGHT\"},{\"deviceValue\":\"EN\",\"standardValue\":[\"EN\",\"ENTER\",\"SELECT\"],\"displayValue\":\"ENTER\"},{\"deviceValue\":\"RT\",\"standardValue\":[\"RT\",\"RETURN\",\"EXIT\",\"BACK\"],\"displayValue\":\"BACK\"}],\"menu\":[{\"deviceValue\":\"HM\",\"standardValue\":[\"HM\",\"HOME\",\"MENU\",\"SETTINGS\"],\"displayValue\":\"MENU\"}],\"audio format\":[{\"deviceValue\":\"01\",\"standardValue\":\"\",\"displayValue\":\"ANALOG\"},{\"deviceValue\":\"03\",\"standardValue\":\"\",\"displayValue\":\"DOLBY DIGITAL+\"},{\"deviceValue\":\"05\",\"standardValue\":\"\",\"displayValue\":\"DOLBY DIGITAL+\"}],\"audio processing\":[{\"deviceValue\":\"1\",\"standardValue\":[\"MCACC\",\"ON\"],\"displayValue\":\"MCACC ON\"},{\"deviceValue\":\"0\",\"standardValue\":\"OFF\",\"displayValue\":\"MCACC OFF\"}],\"audio compression\":[{\"deviceValue\":\"1\",\"standardValue\":\"AUTO\",\"displayValue\":\"DRC AUTO\"},{\"deviceValue\":\"0\",\"standardValue\":\"OFF\",\"displayValue\":\"DRC OFF\"},{\"deviceValue\":\"LOW\",\"standardValue\":\"LOW\",\"displayValue\":\"DRC LOW\"},{\"deviceValue\":\"2\",\"standardValue\":\"MID\",\"displayValue\":\"DRC MID\"},{\"deviceValue\":\"3\",\"standardValue\":\"HI\",\"displayValue\":\"DRC HI\"},{\"deviceValue\":\"9\",\"standardValue\":\"CYCLE\",\"displayValue\":\"DRC CYCLE\"}],\"surround\":[{\"deviceValue\":\"0005\",\"standardValue\":\"AUTO\",\"displayValue\":\"SURR/DIRECT\"},{\"deviceValue\":\"0010\",\"standardValue\":\"STANDARD\",\"displayValue\":\"STANDARD\"},{\"deviceValue\":\"0001\",\"standardValue\":\"STEREOCYCLE\",\"displayValue\":\"STEREO CYCLE\"},{\"deviceValue\":\"0100\",\"standardValue\":\"ADVSURRCYCLE\",\"displayValue\":\"ADV. SURROUND\"},{\"deviceValue\":\"0050\",\"standardValue\":\"THXCYCLE\",\"displayValue\":\"THX CYCLE\"},{\"deviceValue\":\"0009\",\"standardValue\":\"STEREO\",\"displayValue\":\"STEREO\"},{\"deviceValue\":\"0032\",\"standardValue\":\"MOVIE\",\"displayValue\":\"WIDE MOVIE\"},{\"deviceValue\":\"0033\",\"standardValue\":\"MUSIC\",\"displayValue\":\"WIDE MUSIC\"},{\"deviceValue\":\"0112\",\"standardValue\":\"MCH STEREO\",\"displayValue\":\"EXTENDED STEREO\"},{\"deviceValue\":\"0003\",\"standardValue\":\"FRONTSTAGEFOCUS\",\"displayValue\":\"FRONT STAGE FOCUS\"},{\"deviceValue\":\"0004\",\"standardValue\":\"FRONTSTAGEWIDE\",\"displayValue\":\"FRONT STAGE WIDE\"},{\"deviceValue\":\"0113\",\"standardValue\":\"PHONESSURR\",\"displayValue\":\"PHONES SURROUND\"},{\"deviceValue\":\"0006\",\"standardValue\":\"AUTOSURR\",\"displayValue\":\"AUTO SURROUND\"},{\"deviceValue\":\"0151\",\"standardValue\":\"ALC\",\"displayValue\":\"AUTO LEVEL CONTROL\"},{\"deviceValue\":\"0007\",\"standardValue\":\"DIRECT\",\"displayValue\":\"DIRECT\"},{\"deviceValue\":\"0152\",\"standardValue\":\"OPTIMUM\",\"displayValue\":\"OPTIMUM SURROUND\"}],\"surround lm\":[{\"deviceValue\":\"0101\",\"standardValue\":\"[)(]PLIIx MOVIE\",\"displayValue\":\"[)(]PLIIx MOVIE\"},{\"deviceValue\":\"0102\",\"standardValue\":\"[)(]PLII MOVIE\",\"displayValue\":\"[)(]PLII MOVIE\"},{\"deviceValue\":\"0103\",\"standardValue\":\"[)(]PLIIx MUSIC\",\"displayValue\":\"[)(]PLIIx MUSIC\"},{\"deviceValue\":\"0104\",\"standardValue\":\"[)(]PLII MUSIC\",\"displayValue\":\"[)(]PLII MUSIC\"},{\"deviceValue\":\"0105\",\"standardValue\":\"[)(]PLIIx GAME\",\"displayValue\":\"[)(]PLIIx GAME\"},{\"deviceValue\":\"0106\",\"standardValue\":\"[)(]PLII GAME\",\"displayValue\":\"[)(]PLII GAME\"},{\"deviceValue\":\"0107\",\"standardValue\":\"[)(]PROLOGIC\",\"displayValue\":\"[)(]PROLOGIC\"},{\"deviceValue\":\"0108\",\"standardValue\":\"Neo:6 CINEMA\",\"displayValue\":\"Neo:6 CINEMA\"},{\"deviceValue\":\"0109\",\"standardValue\":\"Neo:6 MUSIC\",\"displayValue\":\"Neo:6 MUSIC\"},{\"deviceValue\":\"010a\",\"standardValue\":\"XM HD Surround\",\"displayValue\":\"XM HD Surround\"},{\"deviceValue\":\"010b\",\"standardValue\":\"NEURAL SURR  \",\"displayValue\":\"NEURAL SURR  \"},{\"deviceValue\":\"010c\",\"standardValue\":\"2ch Straight Decode\",\"displayValue\":\"2ch Straight Decode\"},{\"deviceValue\":\"010d\",\"standardValue\":\"[)(]PLIIz HEIGHT\",\"displayValue\":\"[)(]PLIIz HEIGHT\"},{\"deviceValue\":\"010e\",\"standardValue\":\"WIDE SURR MOVIE\",\"displayValue\":\"WIDE SURR MOVIE\"},{\"deviceValue\":\"010f\",\"standardValue\":\"WIDE SURR MUSIC\",\"displayValue\":\"WIDE SURR MUSIC\"},{\"deviceValue\":\"0110\",\"standardValue\":\"STEREO\",\"displayValue\":\"STEREO\"},{\"deviceValue\":\"0111\",\"standardValue\":\"Neo:X CINEMA\",\"displayValue\":\"Neo:X CINEMA\"},{\"deviceValue\":\"0112\",\"standardValue\":\"Neo:X MUSIC\",\"displayValue\":\"Neo:X MUSIC\"},{\"deviceValue\":\"0113\",\"standardValue\":\"Neo:X GAME\",\"displayValue\":\"Neo:X GAME\"},{\"deviceValue\":\"0114\",\"standardValue\":\"NEURAL SURROUND+Neo:X CINEMA\",\"displayValue\":\"NEURAL SURROUND+Neo:X CINEMA\"},{\"deviceValue\":\"0115\",\"standardValue\":\"NEURAL SURROUND+Neo:X MUSIC\",\"displayValue\":\"NEURAL SURROUND+Neo:X MUSIC\"},{\"deviceValue\":\"0116\",\"standardValue\":\"NEURAL SURROUND+Neo:X GAMES\",\"displayValue\":\"NEURAL SURROUND+Neo:X GAMES\"},{\"deviceValue\":\"1101\",\"standardValue\":\"[)(]PLIIx MOVIE\",\"displayValue\":\"[)(]PLIIx MOVIE\"},{\"deviceValue\":\"1102\",\"standardValue\":\"[)(]PLIIx MUSIC\",\"displayValue\":\"[)(]PLIIx MUSIC\"},{\"deviceValue\":\"1103\",\"standardValue\":\"[)(]DIGITAL EX\",\"displayValue\":\"[)(]DIGITAL EX\"},{\"deviceValue\":\"1104\",\"standardValue\":\"DTS +Neo:6 / DTS-HD +Neo:6\",\"displayValue\":\"DTS +Neo:6 / DTS-HD +Neo:6\"},{\"deviceValue\":\"1105\",\"standardValue\":\"ES MATRIX\",\"displayValue\":\"ES MATRIX\"},{\"deviceValue\":\"1106\",\"standardValue\":\"ES DISCRETE\",\"displayValue\":\"ES DISCRETE\"},{\"deviceValue\":\"1107\",\"standardValue\":\"DTS-ES 8ch \",\"displayValue\":\"DTS-ES 8ch \"},{\"deviceValue\":\"1108\",\"standardValue\":\"multi ch Straight Decode\",\"displayValue\":\"multi ch Straight Decode\"},{\"deviceValue\":\"1109\",\"standardValue\":\"[)(]PLIIz HEIGHT\",\"displayValue\":\"[)(]PLIIz HEIGHT\"},{\"deviceValue\":\"110a\",\"standardValue\":\"WIDE SURR MOVIE\",\"displayValue\":\"WIDE SURR MOVIE\"},{\"deviceValue\":\"110b\",\"standardValue\":\"WIDE SURR MUSIC\",\"displayValue\":\"WIDE SURR MUSIC\"},{\"deviceValue\":\"110c\",\"standardValue\":\"Neo:X CINEMA \",\"displayValue\":\"Neo:X CINEMA \"},{\"deviceValue\":\"110d\",\"standardValue\":\"Neo:X MUSIC\",\"displayValue\":\"Neo:X MUSIC\"},{\"deviceValue\":\"110e\",\"standardValue\":\"Neo:X GAME\",\"displayValue\":\"Neo:X GAME\"},{\"deviceValue\":\"0201\",\"standardValue\":\"ACTION\",\"displayValue\":\"ACTION\"},{\"deviceValue\":\"0202\",\"standardValue\":\"DRAMA\",\"displayValue\":\"DRAMA\"},{\"deviceValue\":\"0203\",\"standardValue\":\"SCI-FI\",\"displayValue\":\"SCI-FI\"},{\"deviceValue\":\"0204\",\"standardValue\":\"MONOFILM\",\"displayValue\":\"MONOFILM\"},{\"deviceValue\":\"0205\",\"standardValue\":\"ENT.SHOW\",\"displayValue\":\"ENT.SHOW\"},{\"deviceValue\":\"0206\",\"standardValue\":\"EXPANDED\",\"displayValue\":\"EXPANDED\"},{\"deviceValue\":\"0207\",\"standardValue\":\"TV SURROUND\",\"displayValue\":\"TV SURROUND\"},{\"deviceValue\":\"0208\",\"standardValue\":\"ADVANCEDGAME\",\"displayValue\":\"ADVANCEDGAME\"},{\"deviceValue\":\"0209\",\"standardValue\":\"SPORTS\",\"displayValue\":\"SPORTS\"},{\"deviceValue\":\"020a\",\"standardValue\":\"CLASSICAL   \",\"displayValue\":\"CLASSICAL\"},{\"deviceValue\":\"020b\",\"standardValue\":\"ROCK/POP   \",\"displayValue\":\"ROCK/POP\"},{\"deviceValue\":\"020c\",\"standardValue\":\"UNPLUGGED   \",\"displayValue\":\"UNPLUGGED\"},{\"deviceValue\":\"020d\",\"standardValue\":\"EXT.STEREO  \",\"displayValue\":\"EXT.STEREO\"},{\"deviceValue\":\"020e\",\"standardValue\":\"PHONES SURR. \",\"displayValue\":\"PHONES SURR. \"},{\"deviceValue\":\"020f\",\"standardValue\":\"FRONT STAGE SURROUND ADVANCE FOCUS\",\"displayValue\":\"FRONT STAGE SURROUND ADVANCE FOCUS\"},{\"deviceValue\":\"0210\",\"standardValue\":\"FRONT STAGE SURROUND ADVANCE WIDE\",\"displayValue\":\"FRONT STAGE SURROUND ADVANCE WIDE\"},{\"deviceValue\":\"0211\",\"standardValue\":\"SOUND RETRIEVER AIR\",\"displayValue\":\"SOUND RETRIEVER AIR\"},{\"deviceValue\":\"0301\",\"standardValue\":\"[)(]PLIIx MOVIE +THX\",\"displayValue\":\"[)(]PLIIx MOVIE +THX\"},{\"deviceValue\":\"0302\",\"standardValue\":\"[)(]PLII MOVIE +THX\",\"displayValue\":\"[)(]PLII MOVIE +THX\"},{\"deviceValue\":\"0303\",\"standardValue\":\"[)(]PL +THX CINEMA\",\"displayValue\":\"[)(]PL +THX CINEMA\"},{\"deviceValue\":\"0304\",\"standardValue\":\"Neo:6 CINEMA +THX\",\"displayValue\":\"Neo:6 CINEMA +THX\"},{\"deviceValue\":\"0305\",\"standardValue\":\"THX CINEMA\",\"displayValue\":\"THX CINEMA\"},{\"deviceValue\":\"0306\",\"standardValue\":\"[)(]PLIIx MUSIC +THX\",\"displayValue\":\"[)(]PLIIx MUSIC +THX\"},{\"deviceValue\":\"0307\",\"standardValue\":\"[)(]PLII MUSIC +THX\",\"displayValue\":\"[)(]PLII MUSIC +THX\"},{\"deviceValue\":\"0308\",\"standardValue\":\"[)(]PL +THX MUSIC\",\"displayValue\":\"[)(]PL +THX MUSIC\"},{\"deviceValue\":\"0309\",\"standardValue\":\"Neo:6 MUSIC +THX\",\"displayValue\":\"Neo:6 MUSIC +THX\"},{\"deviceValue\":\"030a\",\"standardValue\":\"THX MUSIC\",\"displayValue\":\"THX MUSIC\"},{\"deviceValue\":\"030b\",\"standardValue\":\"[)(]PLIIx GAME +THX\",\"displayValue\":\"[)(]PLIIx GAME +THX\"},{\"deviceValue\":\"030c\",\"standardValue\":\"[)(]PLII GAME +THX\",\"displayValue\":\"[)(]PLII GAME +THX\"},{\"deviceValue\":\"030d\",\"standardValue\":\"[)(]PL +THX GAMES\",\"displayValue\":\"[)(]PL +THX GAMES\"},{\"deviceValue\":\"030e\",\"standardValue\":\"THX ULTRA2 GAMES\",\"displayValue\":\"THX ULTRA2 GAMES\"},{\"deviceValue\":\"030f\",\"standardValue\":\"THX SELECT2 GAMES\",\"displayValue\":\"THX SELECT2 GAMES\"},{\"deviceValue\":\"0310\",\"standardValue\":\"THX GAMES\",\"displayValue\":\"THX GAMES\"},{\"deviceValue\":\"0311\",\"standardValue\":\"[)(]PLIIz +THX CINEMA\",\"displayValue\":\"[)(]PLIIz +THX CINEMA\"},{\"deviceValue\":\"0312\",\"standardValue\":\"[)(]PLIIz +THX MUSIC\",\"displayValue\":\"[)(]PLIIz +THX MUSIC\"},{\"deviceValue\":\"0313\",\"standardValue\":\"[)(]PLIIz +THX GAMES\",\"displayValue\":\"[)(]PLIIz +THX GAMES\"},{\"deviceValue\":\"0314\",\"standardValue\":\"Neo:X CINEMA + THX CINEMA\",\"displayValue\":\"Neo:X CINEMA + THX CINEMA\"},{\"deviceValue\":\"0315\",\"standardValue\":\"Neo:X MUSIC + THX MUSIC\",\"displayValue\":\"Neo:X MUSIC + THX MUSIC\"},{\"deviceValue\":\"0316\",\"standardValue\":\"Neo:X GAMES + THX GAMES\",\"displayValue\":\"Neo:X GAMES + THX GAMES\"},{\"deviceValue\":\"1301\",\"standardValue\":\"THX Surr EX\",\"displayValue\":\"THX Surr EX\"},{\"deviceValue\":\"1302\",\"standardValue\":\"Neo:6 +THX CINEMA\",\"displayValue\":\"Neo:6 +THX CINEMA\"},{\"deviceValue\":\"1303\",\"standardValue\":\"ES MTRX +THX CINEMA\",\"displayValue\":\"ES MTRX +THX CINEMA\"},{\"deviceValue\":\"1304\",\"standardValue\":\"ES DISC +THX CINEMA\",\"displayValue\":\"ES DISC +THX CINEMA\"},{\"deviceValue\":\"1305\",\"standardValue\":\"ES 8ch +THX CINEMA \",\"displayValue\":\"ES 8ch +THX CINEMA \"},{\"deviceValue\":\"1306\",\"standardValue\":\"[)(]PLIIx MOVIE +THX\",\"displayValue\":\"[)(]PLIIx MOVIE +THX\"},{\"deviceValue\":\"1307\",\"standardValue\":\"THX ULTRA2 CINEMA\",\"displayValue\":\"THX ULTRA2 CINEMA\"},{\"deviceValue\":\"1308\",\"standardValue\":\"THX SELECT2 CINEMA\",\"displayValue\":\"THX SELECT2 CINEMA\"},{\"deviceValue\":\"1309\",\"standardValue\":\"THX CINEMA\",\"displayValue\":\"THX CINEMA\"},{\"deviceValue\":\"130a\",\"standardValue\":\"Neo:6 +THX MUSIC\",\"displayValue\":\"Neo:6 +THX MUSIC\"},{\"deviceValue\":\"130b\",\"standardValue\":\"ES MTRX +THX MUSIC\",\"displayValue\":\"ES MTRX +THX MUSIC\"},{\"deviceValue\":\"130c\",\"standardValue\":\"ES DISC +THX MUSIC\",\"displayValue\":\"ES DISC +THX MUSIC\"},{\"deviceValue\":\"130d\",\"standardValue\":\"ES 8ch +THX MUSIC\",\"displayValue\":\"ES 8ch +THX MUSIC\"},{\"deviceValue\":\"130e\",\"standardValue\":\"[)(]PLIIx MUSIC +THX\",\"displayValue\":\"[)(]PLIIx MUSIC +THX\"},{\"deviceValue\":\"130f\",\"standardValue\":\"THX ULTRA2 MUSIC\",\"displayValue\":\"THX ULTRA2 MUSIC\"},{\"deviceValue\":\"1310\",\"standardValue\":\"THX SELECT2 MUSIC\",\"displayValue\":\"THX SELECT2 MUSIC\"},{\"deviceValue\":\"1311\",\"standardValue\":\"THX MUSIC\",\"displayValue\":\"THX MUSIC\"},{\"deviceValue\":\"1312\",\"standardValue\":\"Neo:6 +THX GAMES\",\"displayValue\":\"Neo:6 +THX GAMES\"},{\"deviceValue\":\"1313\",\"standardValue\":\"ES MTRX +THX GAMES\",\"displayValue\":\"ES MTRX +THX GAMES\"},{\"deviceValue\":\"1314\",\"standardValue\":\"ES DISC +THX GAMES\",\"displayValue\":\"ES DISC +THX GAMES\"},{\"deviceValue\":\"1315\",\"standardValue\":\"ES 8ch +THX GAMES\",\"displayValue\":\"ES 8ch +THX GAMES\"},{\"deviceValue\":\"1316\",\"standardValue\":\"[)(]EX +THX GAMES\",\"displayValue\":\"[)(]EX +THX GAMES\"},{\"deviceValue\":\"1317\",\"standardValue\":\"THX ULTRA2 GAMES\",\"displayValue\":\"THX ULTRA2 GAMES\"},{\"deviceValue\":\"1318\",\"standardValue\":\"THX SELECT2 GAMES\",\"displayValue\":\"THX SELECT2 GAMES\"},{\"deviceValue\":\"1319\",\"standardValue\":\"THX GAMES\",\"displayValue\":\"THX GAMES\"},{\"deviceValue\":\"131a\",\"standardValue\":\"[)(]PLIIz +THX CINEMA\",\"displayValue\":\"[)(]PLIIz +THX CINEMA\"},{\"deviceValue\":\"131b\",\"standardValue\":\"[)(]PLIIz +THX MUSIC\",\"displayValue\":\"[)(]PLIIz +THX MUSIC\"},{\"deviceValue\":\"131c\",\"standardValue\":\"[)(]PLIIz +THX GAMES\",\"displayValue\":\"[)(]PLIIz +THX GAMES\"},{\"deviceValue\":\"131d\",\"standardValue\":\"Neo:X CINEMA + THX CINEMA\",\"displayValue\":\"Neo:X CINEMA + THX CINEMA\"},{\"deviceValue\":\"131e\",\"standardValue\":\"Neo:X MUSIC + THX MUSIC\",\"displayValue\":\"Neo:X MUSIC + THX MUSIC\"},{\"deviceValue\":\"131f\",\"standardValue\":\"Neo:X GAME + THX GAMES\",\"displayValue\":\"Neo:X GAME + THX GAMES\"},{\"deviceValue\":\"0401\",\"standardValue\":\"STEREO\",\"displayValue\":\"STEREO\"},{\"deviceValue\":\"0402\",\"standardValue\":\"[)(]PLII MOVIE\",\"displayValue\":\"[)(]PLII MOVIE\"},{\"deviceValue\":\"0403\",\"standardValue\":\"[)(]PLIIx MOVIE\",\"displayValue\":\"[)(]PLIIx MOVIE\"},{\"deviceValue\":\"0404\",\"standardValue\":\"Neo:6 CINEMA\",\"displayValue\":\"Neo:6 CINEMA\"},{\"deviceValue\":\"0405\",\"standardValue\":\"AUTO SURROUND Straight Decode\",\"displayValue\":\"AUTO SURROUND Straight Decode\"},{\"deviceValue\":\"0406\",\"standardValue\":\"[)(]DIGITAL EX\",\"displayValue\":\"[)(]DIGITAL EX\"},{\"deviceValue\":\"0407\",\"standardValue\":\"[)(]PLIIx MOVIE\",\"displayValue\":\"[)(]PLIIx MOVIE\"},{\"deviceValue\":\"0408\",\"standardValue\":\"DTS +Neo:6\",\"displayValue\":\"DTS +Neo:6\"},{\"deviceValue\":\"0409\",\"standardValue\":\"ES MATRIX\",\"displayValue\":\"ES MATRIX\"},{\"deviceValue\":\"040a\",\"standardValue\":\"ES DISCRETE\",\"displayValue\":\"ES DISCRETE\"},{\"deviceValue\":\"040b\",\"standardValue\":\"DTS-ES 8ch \",\"displayValue\":\"DTS-ES 8ch \"},{\"deviceValue\":\"040c\",\"standardValue\":\"XM HD Surround\",\"displayValue\":\"XM HD Surround\"},{\"deviceValue\":\"040d\",\"standardValue\":\"NEURAL SURR  \",\"displayValue\":\"NEURAL SURR\"},{\"deviceValue\":\"040e\",\"standardValue\":\"RETRIEVER AIR\",\"displayValue\":\"RETRIEVER AIR\"},{\"deviceValue\":\"040f\",\"standardValue\":\"Neo:X CINEMA\",\"displayValue\":\"Neo:X CINEMA\"},{\"deviceValue\":\"0410\",\"standardValue\":\"Neo:X CINEMA \",\"displayValue\":\"Neo:X CINEMA \"},{\"deviceValue\":\"0501\",\"standardValue\":\"STEREO\",\"displayValue\":\"STEREO\"},{\"deviceValue\":\"0502\",\"standardValue\":\"[)(]PLII MOVIE\",\"displayValue\":\"[)(]PLII MOVIE\"},{\"deviceValue\":\"0503\",\"standardValue\":\"[)(]PLIIx MOVIE\",\"displayValue\":\"[)(]PLIIx MOVIE\"},{\"deviceValue\":\"0504\",\"standardValue\":\"Neo:6 CINEMA\",\"displayValue\":\"Neo:6 CINEMA\"},{\"deviceValue\":\"0505\",\"standardValue\":\"ALC Straight Decode\",\"displayValue\":\"ALC Straight Decode\"},{\"deviceValue\":\"0506\",\"standardValue\":\"[)(]DIGITAL EX\",\"displayValue\":\"[)(]DIGITAL EX\"},{\"deviceValue\":\"0507\",\"standardValue\":\"[)(]PLIIx MOVIE\",\"displayValue\":\"[)(]PLIIx MOVIE\"},{\"deviceValue\":\"0508\",\"standardValue\":\"DTS +Neo:6\",\"displayValue\":\"DTS +Neo:6\"},{\"deviceValue\":\"0509\",\"standardValue\":\"ES MATRIX\",\"displayValue\":\"ES MATRIX\"},{\"deviceValue\":\"050a\",\"standardValue\":\"ES DISCRETE\",\"displayValue\":\"ES DISCRETE\"},{\"deviceValue\":\"050b\",\"standardValue\":\"DTS-ES 8ch \",\"displayValue\":\"DTS-ES 8ch\"},{\"deviceValue\":\"050c\",\"standardValue\":\"XM HD Surround\",\"displayValue\":\"XM HD Surround\"},{\"deviceValue\":\"050d\",\"standardValue\":\"NEURAL SURR  \",\"displayValue\":\"NEURAL SURR\"},{\"deviceValue\":\"050e\",\"standardValue\":\"RETRIEVER AIR\",\"displayValue\":\"RETRIEVER AIR\"},{\"deviceValue\":\"050f\",\"standardValue\":\"Neo:X CINEMA\",\"displayValue\":\"Neo:X CINEMA\"},{\"deviceValue\":\"0510\",\"standardValue\":\"Neo:X CINEMA \",\"displayValue\":\"Neo:X CINEMA\"},{\"deviceValue\":\"0601\",\"standardValue\":\"STEREO\",\"displayValue\":\"STEREO\"},{\"deviceValue\":\"0602\",\"standardValue\":\"[)(]PLII MOVIE\",\"displayValue\":\"[)(]PLII MOVIE\"},{\"deviceValue\":\"0603\",\"standardValue\":\"[)(]PLIIx MOVIE\",\"displayValue\":\"[)(]PLIIx MOVIE\"},{\"deviceValue\":\"0604\",\"standardValue\":\"Neo:6 CINEMA\",\"displayValue\":\"Neo:6 CINEMA\"},{\"deviceValue\":\"0605\",\"standardValue\":\"STREAM DIRECT NORMAL Straight Decode\",\"displayValue\":\"STREAM DIRECT NORMAL Straight Decode\"},{\"deviceValue\":\"0606\",\"standardValue\":\"[)(]DIGITAL EX\",\"displayValue\":\"[)(]DIGITAL EX\"},{\"deviceValue\":\"0607\",\"standardValue\":\"[)(]PLIIx MOVIE\",\"displayValue\":\"[)(]PLIIx MOVIE\"},{\"deviceValue\":\"0608\",\"standardValue\":\"(nothing)\",\"displayValue\":\"(nothing)\"},{\"deviceValue\":\"0609\",\"standardValue\":\"ES MATRIX\",\"displayValue\":\"ES MATRIX\"},{\"deviceValue\":\"060a\",\"standardValue\":\"ES DISCRETE\",\"displayValue\":\"ES DISCRETE\"},{\"deviceValue\":\"060b\",\"standardValue\":\"DTS-ES 8ch \",\"displayValue\":\"DTS-ES 8ch\"},{\"deviceValue\":\"060c\",\"standardValue\":\"Neo:X CINEMA\",\"displayValue\":\"Neo:X CINEMA\"},{\"deviceValue\":\"060d\",\"standardValue\":\"Neo:X CINEMA \",\"displayValue\":\"Neo:X CINEMA \"},{\"deviceValue\":\"0701\",\"standardValue\":\"STREAM DIRECT PURE 2ch\",\"displayValue\":\"STREAM DIRECT PURE 2ch\"},{\"deviceValue\":\"0702\",\"standardValue\":\"[)(]PLII MOVIE\",\"displayValue\":\"[)(]PLII MOVIE\"},{\"deviceValue\":\"0703\",\"standardValue\":\"[)(]PLIIx MOVIE\",\"displayValue\":\"[)(]PLIIx MOVIE\"},{\"deviceValue\":\"0704\",\"standardValue\":\"Neo:6 CINEMA\",\"displayValue\":\"Neo:6 CINEMA\"},{\"deviceValue\":\"0705\",\"standardValue\":\"STREAM DIRECT PURE Straight Decode\",\"displayValue\":\"STREAM DIRECT PURE Straight Decode\"},{\"deviceValue\":\"0706\",\"standardValue\":\"[)(]DIGITAL EX\",\"displayValue\":\"[)(]DIGITAL EX\"},{\"deviceValue\":\"0707\",\"standardValue\":\"[)(]PLIIx MOVIE\",\"displayValue\":\"[)(]PLIIx MOVIE\"},{\"deviceValue\":\"0708\",\"standardValue\":\"(nothing)\",\"displayValue\":\"(nothing)\"},{\"deviceValue\":\"0709\",\"standardValue\":\"ES MATRIX\",\"displayValue\":\"ES MATRIX\"},{\"deviceValue\":\"070a\",\"standardValue\":\"ES DISCRETE\",\"displayValue\":\"ES DISCRETE\"},{\"deviceValue\":\"070b\",\"standardValue\":\"DTS-ES 8ch \",\"displayValue\":\"DTS-ES 8ch\"},{\"deviceValue\":\"070c\",\"standardValue\":\"Neo:X CINEMA\",\"displayValue\":\"Neo:X CINEMA\"},{\"deviceValue\":\"070d\",\"standardValue\":\"Neo:X CINEMA \",\"displayValue\":\"Neo:X CINEMA\"},{\"deviceValue\":\"0881\",\"standardValue\":\"OPTIMUM\",\"displayValue\":\"OPTIMUM\"},{\"deviceValue\":\"0000\",\"standardValue\":\"HDMI THROUGH\",\"displayValue\":\"HDMI THROUGH\"},{\"deviceValue\":\"0f01\",\"standardValue\":\"MULTI CH IN\",\"displayValue\":\"MULTI CH IN\"}],\"volume\":[{\"deviceValue\":\"{\\\"min\\\": \\\"0\\\",\\\"max\\\": \\\"185\\\"}\",\"standardValue\":\"\",\"displayValue\":\"eval(x=parseInt(x/185*100);x = x)\"}],\"heartbeat\":[{\"deviceValue\":\"\",\"standardValue\":\"\",\"displayValue\":\"eval(Date())\"}],\"volumedB\":[{\"deviceValue\":\"eval((parseInt(x)+80.5)*2)\",\"standardValue\":\"\",\"displayValue\":\"eval(((x * 0.5)-80.5) + 'dB')\"}],\"zone volume\":[{\"deviceValue\":\"{\\\"min\\\": \\\"0\\\",\\\"max\\\": \\\"81\\\"}\",\"standardValue\":\"\",\"displayValue\":\"eval(x=parseInt(x/81*100);x = x + '\\\\%')\"}],\"zone volumedB\":[{\"deviceValue\":\"eval((parseInt(x)+81))\",\"standardValue\":\"\",\"displayValue\":\"eval((x-81) + 'dB')\"}]},\"advanced\":{\"input signal\":{\"category\":\"audio\",\"topic\":\"audio format\",\"command\":\"audio signal\",\"type\":\"regex\",\"match\":\"(\\\\d{2})\",\"valueMap\":[{\"regex\":\"(00)\",\"displayValue\":\"ANALOG\"},{\"regex\":\"(01)\",\"displayValue\":\"ANALOG\"},{\"regex\":\"(02)\",\"displayValue\":\"ANALOG\"},{\"regex\":\"(03)\",\"displayValue\":\"PCM\"},{\"regex\":\"(04)\",\"displayValue\":\"PCM\"},{\"regex\":\"(05)\",\"displayValue\":\"DOLBY DIGITAL\"},{\"regex\":\"(06)\",\"displayValue\":\"DTS\"},{\"regex\":\"(07)\",\"displayValue\":\"DTS-ES Matrix\"},{\"regex\":\"(08)\",\"displayValue\":\"DTS-ES Discrete\"},{\"regex\":\"(09)\",\"displayValue\":\"DTS 96/24\"},{\"regex\":\"(10)\",\"displayValue\":\"DTS 96/24 ES Matrix\"},{\"regex\":\"(11)\",\"displayValue\":\"DTS 96/24 ES Discrete\"},{\"regex\":\"(12)\",\"displayValue\":\"MPEG-2 AAC\"},{\"regex\":\"(13)\",\"displayValue\":\"WMA9 Pro\"},{\"regex\":\"(14)\",\"displayValue\":\"DSD (HDMI or File via DSP route)\"},{\"regex\":\"(15)\",\"displayValue\":\"HDMI THROUGH\"},{\"regex\":\"(16)\",\"displayValue\":\"DOLBY DIGITAL PLUS\"},{\"regex\":\"(17)\",\"displayValue\":\"DOLBY TrueHD\"},{\"regex\":\"(18)\",\"displayValue\":\"DTS EXPRESS\"},{\"regex\":\"(19)\",\"displayValue\":\"DTS-HD Master Audio\"},{\"regex\":\"(20)\",\"displayValue\":\"DTS-HD High Resolution\"},{\"regex\":\"(21)\",\"displayValue\":\"DTS-HD High Resolution\"},{\"regex\":\"(22)\",\"displayValue\":\"DTS-HD High Resolution\"},{\"regex\":\"(23)\",\"displayValue\":\"DTS-HD High Resolution\"},{\"regex\":\"(24)\",\"displayValue\":\"DTS-HD High Resolution\"},{\"regex\":\"(25)\",\"displayValue\":\"DTS-HD High Resolution\"},{\"regex\":\"(26)\",\"displayValue\":\"DTS-HD High Resolution\"},{\"regex\":\"(27)\",\"displayValue\":\"DTS-HD Master Audio\"},{\"regex\":\"(28)\",\"displayValue\":\"DSD (HDMI or File via DSD DIRECT route)\"},{\"regex\":\"(29)\",\"displayValue\":\"Dolby Atmos\"},{\"regex\":\"(30)\",\"displayValue\":\"Dolby Atmos over Dolby Digital Plus\"},{\"regex\":\"(31)\",\"displayValue\":\"Dolby Atmos over Dolby TrueHD\"},{\"regex\":\"(64)\",\"displayValue\":\"MP3\"},{\"regex\":\"(65)\",\"displayValue\":\"WAV\"},{\"regex\":\"(66)\",\"displayValue\":\"WMA\"},{\"regex\":\"(67)\",\"displayValue\":\"MPEG4-AAC\"},{\"regex\":\"(68)\",\"displayValue\":\"FLAC\"},{\"regex\":\"(69)\",\"displayValue\":\"ALAC(Apple Lossless)\"},{\"regex\":\"(70)\",\"displayValue\":\"AIFF\"},{\"regex\":\"(71)\",\"displayValue\":\"DSD (USB-DAC)\"},{\"regex\":\"(72)\",\"displayValue\":\"Spotify\"}]},\"input format\":{\"category\":\"audio\",\"topic\":\"audio frequency\",\"command\":\"audio signal\",\"type\":\"regex\",\"match\":\"^..(\\\\d\\\\d)\",\"valueMap\":[{\"regex\":\"(00)\",\"displayValue\":\"32kHz\"},{\"regex\":\"(01)\",\"displayValue\":\"44.1kHz\"},{\"regex\":\"(02)\",\"displayValue\":\"48kHz\"},{\"regex\":\"(03)\",\"displayValue\":\"88.2kHz\"},{\"regex\":\"(04)\",\"displayValue\":\"96kHz\"},{\"regex\":\"(05)\",\"displayValue\":\"176.4kHz\"},{\"regex\":\"(06)\",\"displayValue\":\"192kHz\"},{\"regex\":\"(07)\",\"displayValue\":\"---\"}]},\"input speakers\":{\"category\":\"audio\",\"topic\":\"channels in\",\"command\":\"audio signal\",\"type\":\"target\",\"match\":\"^.{4}(\\\\d{16})\",\"values\":{\"match\":1,\"nomatch\":0},\"valueMap\":[{\"regex\":\"^.{0}(.{1})\",\"target\":\"1\",\"topic\":\"L\"},{\"regex\":\"^.{1}(.{1})\",\"target\":\"1\",\"topic\":\"C\"},{\"regex\":\"^.{2}(.{1})\",\"target\":\"1\",\"topic\":\"R\"},{\"regex\":\"^.{3}(.{1})\",\"target\":\"1\",\"topic\":\"SL\"},{\"regex\":\"^.{4}(.{1})\",\"target\":\"1\",\"topic\":\"SR\"},{\"regex\":\"^.{5}(.{1})\",\"target\":\"1\",\"topic\":\"SBL\"},{\"regex\":\"^.{6}(.{1})\",\"target\":\"1\",\"topic\":\"SB\"},{\"regex\":\"^.{7}(.{1})\",\"target\":\"1\",\"topic\":\"SBR\"},{\"regex\":\"^.{8}(.{1})\",\"target\":\"1\",\"topic\":\"SW\"},{\"regex\":\"^.{9}(.{1})\",\"target\":\"1\",\"topic\":\"FHL\"},{\"regex\":\"^.{10}(.{1})\",\"target\":\"1\",\"topic\":\"FHR\"},{\"regex\":\"^.{11}(.{1})\",\"target\":\"1\",\"topic\":\"FWL\"},{\"regex\":\"^.{12}(.{1})\",\"target\":\"1\",\"topic\":\"FWR\"},{\"regex\":\"^.{13}(.{1})\",\"target\":\"1\",\"topic\":\"XL\"},{\"regex\":\"^.{14}(.{1})\",\"target\":\"1\",\"topic\":\"XC\"},{\"regex\":\"^.{15}(.{1})\",\"target\":\"1\",\"topic\":\"XR\"}]},\"output speakers\":{\"category\":\"audio\",\"topic\":\"channels out\",\"command\":\"audio signal\",\"type\":\"target\",\"match\":\"^.{25}(\\\\d{18})\",\"values\":{\"match\":1,\"nomatch\":0},\"valueMap\":[{\"regex\":\"^.{0}(.{1})\",\"target\":\"1\",\"topic\":\"L\"},{\"regex\":\"^.{1}(.{1})\",\"target\":\"1\",\"topic\":\"C\"},{\"regex\":\"^.{2}(.{1})\",\"target\":\"1\",\"topic\":\"R\"},{\"regex\":\"^.{3}(.{1})\",\"target\":\"1\",\"topic\":\"SL\"},{\"regex\":\"^.{4}(.{1})\",\"target\":\"1\",\"topic\":\"SR\"},{\"regex\":\"^.{5}(.{1})\",\"target\":\"1\",\"topic\":\"SBL\"},{\"regex\":\"^.{6}(.{1})\",\"target\":\"1\",\"topic\":\"SB\"},{\"regex\":\"^.{7}(.{1})\",\"target\":\"1\",\"topic\":\"SBR\"},{\"regex\":\"^.{8}(.{1})\",\"target\":\"1\",\"topic\":\"SW\"},{\"regex\":\"^.{9}(.{1})\",\"target\":\"1\",\"topic\":\"FHL\"},{\"regex\":\"^.{10}(.{1})\",\"target\":\"1\",\"topic\":\"FHR\"},{\"regex\":\"^.{11}(.{1})\",\"target\":\"1\",\"topic\":\"FWL\"},{\"regex\":\"^.{12}(.{1})\",\"target\":\"1\",\"topic\":\"FWR\"},{\"regex\":\"^.{13}(.{1})\",\"target\":\"1\",\"topic\":\"TML\"},{\"regex\":\"^.{14}(.{1})\",\"target\":\"1\",\"topic\":\"TMR\"},{\"regex\":\"^.{15}(.{1})\",\"target\":\"1\",\"topic\":\"TRL\"},{\"regex\":\"^.{16}(.{1})\",\"target\":\"1\",\"topic\":\"TRR\"},{\"regex\":\"^.{17}(.{1})\",\"target\":\"1\",\"topic\":\"SW2\"}]},\"input resolution\":{\"category\":\"video\",\"topic\":\"video signal in\",\"command\":\"video signal\",\"type\":\"regex\",\"match\":\"^.(\\\\d\\\\d)\",\"valueMap\":[{\"regex\":\"(00)\",\"displayValue\":\"---\"},{\"regex\":\"(01)\",\"displayValue\":\"480i\"},{\"regex\":\"(02)\",\"displayValue\":\"576i\"},{\"regex\":\"(03)\",\"displayValue\":\"480p\"},{\"regex\":\"(04)\",\"displayValue\":\"576p\"},{\"regex\":\"(05)\",\"displayValue\":\"720/60p\"},{\"regex\":\"(06)\",\"displayValue\":\"720/50p\"},{\"regex\":\"(07)\",\"displayValue\":\"1080/60i\"},{\"regex\":\"(08)\",\"displayValue\":\"1080/50i\"},{\"regex\":\"(09)\",\"displayValue\":\"1080/60p\"},{\"regex\":\"(10)\",\"displayValue\":\"1080/50p\"},{\"regex\":\"(11)\",\"displayValue\":\"1080/24p\"},{\"regex\":\"(12)\",\"displayValue\":\"4k/24Hz\"},{\"regex\":\"(13)\",\"displayValue\":\"4k/25Hz\"},{\"regex\":\"(14)\",\"displayValue\":\"4k/30Hz\"},{\"regex\":\"(15)\",\"displayValue\":\"4k/24Hz SMPTE\"},{\"regex\":\"(16)\",\"displayValue\":\"4k/50Hz\"},{\"regex\":\"(17)\",\"displayValue\":\"4k/60Hz\"}]},\"output resolution\":{\"category\":\"video\",\"topic\":\"video signal out\",\"command\":\"video signal\",\"type\":\"regex\",\"match\":\"^.{7}(\\\\d\\\\d)\",\"valueMap\":[{\"regex\":\"(00)\",\"displayValue\":\"---\"},{\"regex\":\"(01)\",\"displayValue\":\"480i\"},{\"regex\":\"(02)\",\"displayValue\":\"576i\"},{\"regex\":\"(03)\",\"displayValue\":\"480p\"},{\"regex\":\"(04)\",\"displayValue\":\"576p\"},{\"regex\":\"(05)\",\"displayValue\":\"720/60p\"},{\"regex\":\"(06)\",\"displayValue\":\"720/50p\"},{\"regex\":\"(07)\",\"displayValue\":\"1080/60i\"},{\"regex\":\"(08)\",\"displayValue\":\"1080/50i\"},{\"regex\":\"(09)\",\"displayValue\":\"1080/60p\"},{\"regex\":\"(10)\",\"displayValue\":\"1080/50p\"},{\"regex\":\"(11)\",\"displayValue\":\"1080/24p\"},{\"regex\":\"(12)\",\"displayValue\":\"4k/24Hz\"},{\"regex\":\"(13)\",\"displayValue\":\"4k/25Hz\"},{\"regex\":\"(14)\",\"displayValue\":\"4k/30Hz\"},{\"regex\":\"(15)\",\"displayValue\":\"4k/24Hz SMPTE\"},{\"regex\":\"(16)\",\"displayValue\":\"4k/50Hz\"},{\"regex\":\"(17)\",\"displayValue\":\"4k/60Hz\"}]},\"input channels\":{\"category\":\"audio\",\"topic\":\"input channel format\",\"command\":\"audio signal\",\"type\":\"regex\",\"match\":\"^.{4}(\\\\d{18})\",\"valueMap\":[{\"regex\":\"(^0{18})\",\"displayValue\":\"-\"},{\"regex\":\"(^1010000000{9})\",\"displayValue\":\"STEREO\"},{\"regex\":\"(^1010000010{9})\",\"displayValue\":\"STEREO\"},{\"regex\":\"(^1010000010{8}1)\",\"displayValue\":\"STEREO\"},{\"regex\":\"(^1110000010{9})\",\"displayValue\":\"3.1\"},{\"regex\":\"(^1110000010{8}1)\",\"displayValue\":\"3.2\"},{\"regex\":\"(^1011100010{9}|^1010010110{9})\",\"displayValue\":\"4.1\"},{\"regex\":\"(^1011100010{8}1|^1010010110{8}1)\",\"displayValue\":\"5.2\"},{\"regex\":\"(^1111100010{9}|^1110010110{9})\",\"displayValue\":\"5.1\"},{\"regex\":\"(^1111100010{8}1|^1110010110{8}1)\",\"displayValue\":\"5.2\"},{\"regex\":\"(^1111110110{9})\",\"displayValue\":\"7.1\"},{\"regex\":\"(^1111110110{8}1)\",\"displayValue\":\"7.2\"},{\"regex\":\"(^111111011110{7})\",\"displayValue\":\"9.1\"},{\"regex\":\"(^111111011110{6}1)\",\"displayValue\":\"9.2\"},{\"regex\":\"(^11111101100110{5})\",\"displayValue\":\"9.1\"},{\"regex\":\"(^11111101100110{4}1)\",\"displayValue\":\"9.2\"},{\"regex\":\"(^11111101111110{5})\",\"displayValue\":\"11.1\"},{\"regex\":\"(^11111101111110{4}1)\",\"displayValue\":\"11.2\"}]},\"output channels\":{\"category\":\"audio\",\"topic\":\"output channel format\",\"command\":\"audio signal\",\"type\":\"regex\",\"match\":\"^.{25}(\\\\d{18})\",\"valueMap\":[{\"regex\":\"(^1010000000{9})\",\"displayValue\":\"STEREO\"},{\"regex\":\"(^1010000010{9})\",\"displayValue\":\"STEREO\"},{\"regex\":\"(^1010000010{8}1)\",\"displayValue\":\"STEREO\"},{\"regex\":\"(^1110000010{9})\",\"displayValue\":\"3.1\"},{\"regex\":\"(^1110000010{8}1)\",\"displayValue\":\"3.2\"},{\"regex\":\"(^1011100010{9}|^1010010110{9})\",\"displayValue\":\"4.1\"},{\"regex\":\"(^1011100010{8}1|^1010010110{8}1)\",\"displayValue\":\"5.2\"},{\"regex\":\"(^1111100010{9}|^1110010110{9})\",\"displayValue\":\"5.1\"},{\"regex\":\"(^1111100010{8}1|^1110010110{8}1)\",\"displayValue\":\"5.2\"},{\"regex\":\"(^1111110110{9})\",\"displayValue\":\"7.1\"},{\"regex\":\"(^1111110110{8}1)\",\"displayValue\":\"7.2\"},{\"regex\":\"(^111111011110{7})\",\"displayValue\":\"9.1\"},{\"regex\":\"(^111111011110{6}1)\",\"displayValue\":\"9.2\"},{\"regex\":\"(^11111101100110{5})\",\"displayValue\":\"9.1\"},{\"regex\":\"(^11111101100110{4}1)\",\"displayValue\":\"9.2\"},{\"regex\":\"(^11111101111110{5})\",\"displayValue\":\"11.1\"},{\"regex\":\"(^11111101111110{4}1)\",\"displayValue\":\"11.2\"}]}},\"statusRequests\":{\"initial state\":[[\"power\",200],[\"z2 power\",200],[\"z3 power\",200],[\"z4 power\",200]],\"power on\":[[\"mute\",200],[\"input\",400],[\"volume\",600]],\"z2\":[[\"z2 mute\",200],[\"z2 volume\",200],[\"z2 input\",800]],\"z3\":[[\"z3 mute\",200],[\"z3 volume\",200],[\"z3 input\",800]],\"z4\":[[\"z4 mute\",200],[\"z4 volume\",200],[\"z4 input\",800]],\"power off\":[],\"new input\":[[\"surround\",200],[\"surround lm\",400],[\"audio format\",1500],[\"audio processing\",2000],[\"audio compression\",2200],[\"audio signal\",3400],[\"video signal\",3600]]}}}}",
+        "payloadType": "json",
+        "tag": "autobot-global-config"
+    },
+    {
+        "id": "3e1df7ad.813218",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "rpiMQTT",
+        "broker": "192.168.1.80",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": ""
+    },
+    {
+        "id": "8c73cb13.c11298",
+        "type": "tls-config",
+        "z": "",
+        "name": "acu_samsung",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "ac_access.crt",
+        "keyname": "ac_access_nopwd.key",
+        "caname": "certificate.cer",
+        "verifyservercert": false
+    },
+    {
+        "id": "868a8bce.ea76a8",
+        "type": "autobot-filter",
+        "z": "4d7850ca.2f64b",
+        "name": "",
+        "x": 850,
+        "y": 260,
+        "wires": [
+            [
+                "21eee38b.6ebf2c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "6ef37a32.ca0364",
+        "type": "autobot-local-config",
+        "z": "4d7850ca.2f64b",
+        "name": "",
+        "projectName": "dragonfly",
+        "location": "Basement",
+        "location2": "",
+        "deviceClass": "Receiver",
+        "deviceName": "VSX-1121",
+        "deviceId": "",
+        "ipAddress": "192.168.1.80",
+        "port": "8102",
+        "suppressUnknowns": true,
+        "configuration": "4ef4ad32.7045a4",
+        "x": 590,
+        "y": 60,
+        "wires": [
+            [
+                "9c7b9395.acb22"
+            ]
+        ]
+    },
+    {
+        "id": "21eee38b.6ebf2c",
+        "type": "autobot-split",
+        "z": "4d7850ca.2f64b",
+        "name": "",
+        "splt": "deviceSettings.delimiterIn",
+        "spltType": "flow",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": true,
+        "addname": "",
+        "x": 970,
+        "y": 320,
+        "wires": [
+            [
+                "d75dd295.83e43"
+            ]
+        ]
+    },
+    {
+        "id": "d75dd295.83e43",
+        "type": "autobot-receive",
+        "z": "4d7850ca.2f64b",
+        "name": "",
+        "x": 1040,
+        "y": 420,
+        "wires": [
+            [
+                "42086e91.9ebaa",
+                "9c7b9395.acb22"
+            ],
+            [
+                "e3b4cfb.9e2963"
+            ]
+        ]
+    },
+    {
+        "id": "42086e91.9ebaa",
+        "type": "debug",
+        "z": "4d7850ca.2f64b",
+        "name": "status",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1250,
+        "y": 413,
+        "wires": []
+    },
+    {
+        "id": "a3e3c8d5.b0cde8",
+        "type": "tcp request",
+        "z": "4d7850ca.2f64b",
+        "server": "192.168.1.127",
+        "port": "8102",
+        "out": "sit",
+        "splitc": " ",
+        "name": "",
+        "x": 650,
+        "y": 180,
+        "wires": [
+            [
+                "868a8bce.ea76a8"
+            ]
+        ]
+    },
+    {
+        "id": "d79e3729.7789d8",
+        "type": "delay",
+        "z": "4d7850ca.2f64b",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "4",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 510,
+        "y": 400,
+        "wires": [
+            [
+                "a3e3c8d5.b0cde8",
+                "cee307d.6e8d3f8"
+            ]
+        ]
+    },
+    {
+        "id": "a61f1450.82c388",
+        "type": "autobot-send",
+        "z": "4d7850ca.2f64b",
+        "name": "",
+        "x": 310,
+        "y": 420,
+        "wires": [
+            [
+                "d79e3729.7789d8"
+            ],
+            [
+                "e3b4cfb.9e2963"
+            ]
+        ]
+    },
+    {
+        "id": "5e32962.9e8fc68",
+        "type": "mqtt in",
+        "z": "4d7850ca.2f64b",
+        "name": "mqtt in (commands)",
+        "topic": "dragonfly/Basement/Receiver/Command",
+        "qos": "1",
+        "broker": "3e1df7ad.813218",
+        "x": 110,
+        "y": 180,
+        "wires": [
+            [
+                "45928c8a.1d9a24"
+            ]
+        ]
+    },
+    {
+        "id": "45928c8a.1d9a24",
+        "type": "json",
+        "z": "4d7850ca.2f64b",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 130,
+        "y": 280,
+        "wires": [
+            [
+                "a61f1450.82c388"
+            ]
+        ]
+    },
+    {
+        "id": "e3b4cfb.9e2963",
+        "type": "delay",
+        "z": "4d7850ca.2f64b",
+        "name": "",
+        "pauseType": "delayv",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 520,
+        "y": 440,
+        "wires": [
+            [
+                "d79e3729.7789d8"
+            ]
+        ]
+    },
+    {
+        "id": "9c7b9395.acb22",
+        "type": "mqtt out",
+        "z": "4d7850ca.2f64b",
+        "name": "mqtt out (status/def)",
+        "topic": "",
+        "qos": "1",
+        "retain": "true",
+        "broker": "3e1df7ad.813218",
+        "x": 1300,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "cee307d.6e8d3f8",
+        "type": "debug",
+        "z": "4d7850ca.2f64b",
+        "name": "commands",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 690,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "a7e881fc.bc327",
+        "type": "comment",
+        "z": "4d7850ca.2f64b",
+        "name": "manual entry",
+        "info": "",
+        "x": 110,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "ce55343c.0b23f8",
+        "type": "comment",
+        "z": "4d7850ca.2f64b",
+        "name": "manual entry",
+        "info": "",
+        "x": 595,
+        "y": 25,
+        "wires": []
+    },
+    {
+        "id": "cab15928.3696d8",
+        "type": "comment",
+        "z": "4d7850ca.2f64b",
+        "name": "manual entry",
+        "info": "",
+        "x": 1290,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "8f7ec3d.434a74",
+        "type": "comment",
+        "z": "4d7850ca.2f64b",
+        "name": "manual entry",
+        "info": "",
+        "x": 650,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "c9abd099.e5e9f",
+        "type": "comment",
+        "z": "4d7850ca.2f64b",
+        "name": "manual entry",
+        "info": "",
+        "x": 510,
+        "y": 364,
+        "wires": []
+    },
+    {
+        "id": "9bd7f0b3.186a7",
+        "type": "status",
+        "z": "4d7850ca.2f64b",
+        "name": "initialize",
+        "scope": [
+            "9c7b9395.acb22"
+        ],
+        "x": 290,
+        "y": 60,
+        "wires": [
+            [
+                "6ef37a32.ca0364",
+                "472c3b3b.379674"
+            ]
+        ]
+    },
+    {
+        "id": "472c3b3b.379674",
+        "type": "change",
+        "z": "4d7850ca.2f64b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[{\"command\":\"volume\",\"value\":\"status\"},{\"command\":\"device\",\"value\":\"STATUS\"}]",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 100,
+        "wires": [
+            [
+                "a61f1450.82c388"
+            ]
+        ]
+    },
+    {
+        "id": "c1a0aa47.c46e58",
+        "type": "autobot-filter",
+        "z": "89e4bc6d.4caf5",
+        "name": "",
+        "x": 850,
+        "y": 260,
+        "wires": [
+            [
+                "40fa1fa7.2676a"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e029ca20.c1c598",
+        "type": "autobot-local-config",
+        "z": "89e4bc6d.4caf5",
+        "name": "",
+        "projectName": "dragonfly",
+        "location": "Family Room",
+        "location2": "",
+        "deviceClass": "Receiver",
+        "deviceName": "SC-1223",
+        "deviceId": "",
+        "ipAddress": "192.168.1.138",
+        "port": "8102",
+        "suppressUnknowns": true,
+        "configuration": "4ef4ad32.7045a4",
+        "x": 590,
+        "y": 60,
+        "wires": [
+            [
+                "637f2e6.24cd3d"
+            ]
+        ]
+    },
+    {
+        "id": "40fa1fa7.2676a",
+        "type": "autobot-split",
+        "z": "89e4bc6d.4caf5",
+        "name": "",
+        "splt": "deviceSettings.delimiterIn",
+        "spltType": "flow",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": true,
+        "addname": "",
+        "x": 970,
+        "y": 320,
+        "wires": [
+            [
+                "4eef9a15.d74a74"
+            ]
+        ]
+    },
+    {
+        "id": "4eef9a15.d74a74",
+        "type": "autobot-receive",
+        "z": "89e4bc6d.4caf5",
+        "name": "",
+        "x": 1040,
+        "y": 420,
+        "wires": [
+            [
+                "de5660c4.5880e",
+                "637f2e6.24cd3d"
+            ],
+            [
+                "99b5c87e.4ed848"
+            ]
+        ]
+    },
+    {
+        "id": "de5660c4.5880e",
+        "type": "debug",
+        "z": "89e4bc6d.4caf5",
+        "name": "status",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1250,
+        "y": 413,
+        "wires": []
+    },
+    {
+        "id": "85bab0af.dcba6",
+        "type": "tcp request",
+        "z": "89e4bc6d.4caf5",
+        "server": "192.168.1.138",
+        "port": "8102",
+        "out": "sit",
+        "splitc": " ",
+        "name": "",
+        "x": 650,
+        "y": 180,
+        "wires": [
+            [
+                "c1a0aa47.c46e58"
+            ]
+        ]
+    },
+    {
+        "id": "44c06a1a.40b3d4",
+        "type": "delay",
+        "z": "89e4bc6d.4caf5",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "4",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 510,
+        "y": 400,
+        "wires": [
+            [
+                "85bab0af.dcba6",
+                "302f6930.ffd3d6"
+            ]
+        ]
+    },
+    {
+        "id": "58793893.de3918",
+        "type": "autobot-send",
+        "z": "89e4bc6d.4caf5",
+        "name": "",
+        "x": 310,
+        "y": 420,
+        "wires": [
+            [
+                "44c06a1a.40b3d4"
+            ],
+            [
+                "99b5c87e.4ed848"
+            ]
+        ]
+    },
+    {
+        "id": "43151992.b077b8",
+        "type": "mqtt in",
+        "z": "89e4bc6d.4caf5",
+        "name": "mqtt in (commands)",
+        "topic": "dragonfly/Family Room/Receiver/Command",
+        "qos": "1",
+        "broker": "3e1df7ad.813218",
+        "x": 110,
+        "y": 180,
+        "wires": [
+            [
+                "25f88cda.4b0854"
+            ]
+        ]
+    },
+    {
+        "id": "25f88cda.4b0854",
+        "type": "json",
+        "z": "89e4bc6d.4caf5",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 130,
+        "y": 280,
+        "wires": [
+            [
+                "58793893.de3918"
+            ]
+        ]
+    },
+    {
+        "id": "99b5c87e.4ed848",
+        "type": "delay",
+        "z": "89e4bc6d.4caf5",
+        "name": "",
+        "pauseType": "delayv",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 520,
+        "y": 440,
+        "wires": [
+            [
+                "44c06a1a.40b3d4"
+            ]
+        ]
+    },
+    {
+        "id": "637f2e6.24cd3d",
+        "type": "mqtt out",
+        "z": "89e4bc6d.4caf5",
+        "name": "mqtt out (status/def)",
+        "topic": "",
+        "qos": "1",
+        "retain": "true",
+        "broker": "3e1df7ad.813218",
+        "x": 1300,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "302f6930.ffd3d6",
+        "type": "debug",
+        "z": "89e4bc6d.4caf5",
+        "name": "commands",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 690,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "975d1ebe.60e6f",
+        "type": "comment",
+        "z": "89e4bc6d.4caf5",
+        "name": "manual entry",
+        "info": "",
+        "x": 110,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "bdddba46.ce5948",
+        "type": "comment",
+        "z": "89e4bc6d.4caf5",
+        "name": "manual entry",
+        "info": "",
+        "x": 595,
+        "y": 25,
+        "wires": []
+    },
+    {
+        "id": "c6526960.ab65b8",
+        "type": "comment",
+        "z": "89e4bc6d.4caf5",
+        "name": "manual entry",
+        "info": "",
+        "x": 1290,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "246dae94.a59092",
+        "type": "comment",
+        "z": "89e4bc6d.4caf5",
+        "name": "manual entry",
+        "info": "",
+        "x": 650,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "8da1925.749407",
+        "type": "comment",
+        "z": "89e4bc6d.4caf5",
+        "name": "manual entry",
+        "info": "",
+        "x": 510,
+        "y": 364,
+        "wires": []
+    },
+    {
+        "id": "318afefa.30e3d2",
+        "type": "status",
+        "z": "89e4bc6d.4caf5",
+        "name": "initialize",
+        "scope": [
+            "637f2e6.24cd3d"
+        ],
+        "x": 290,
+        "y": 60,
+        "wires": [
+            [
+                "e029ca20.c1c598",
+                "7e1d2057.f17b1"
+            ]
+        ]
+    },
+    {
+        "id": "7e1d2057.f17b1",
+        "type": "change",
+        "z": "89e4bc6d.4caf5",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[{\"command\":\"volume\",\"value\":\"status\"},{\"command\":\"device\",\"value\":\"STATUS\"}]",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 100,
+        "wires": [
+            [
+                "58793893.de3918"
+            ]
+        ]
+    },
+    {
+        "id": "cbe22b29.b85108",
+        "type": "http request",
+        "z": "4757eb73.c56844",
+        "name": "ACU request",
+        "method": "use",
+        "ret": "obj",
+        "url": "",
+        "tls": "8c73cb13.c11298",
+        "x": 830,
+        "y": 300,
+        "wires": [
+            [
+                "a0e1be92.508bc"
+            ]
+        ]
+    },
+    {
+        "id": "7e18121e.3f746c",
+        "type": "debug",
+        "z": "4757eb73.c56844",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "status",
+        "x": 1130,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "ee60ce9.f1af03",
+        "type": "function",
+        "z": "4757eb73.c56844",
+        "name": "HTTP headers",
+        "func": "\nmsg.headers = {};\n\nmsg.headers[\"content-type\"] = \"application/json\";\nmsg.headers[\"authorization\"] = \"Bearer RF9UT3pZW0\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 660,
+        "y": 300,
+        "wires": [
+            [
+                "cbe22b29.b85108"
+            ]
+        ]
+    },
+    {
+        "id": "a0e1be92.508bc",
+        "type": "change",
+        "z": "4757eb73.c56844",
+        "name": "set status",
+        "rules": [
+            {
+                "t": "set",
+                "p": "status.uuid",
+                "pt": "msg",
+                "to": "payload.Devices[0].uuid",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "status.power",
+                "pt": "msg",
+                "to": "payload.Devices[0].Operation.power",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "status.mode",
+                "pt": "msg",
+                "to": "payload.Devices[0].Mode.modes",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "status.options.comode",
+                "pt": "msg",
+                "to": "$split(payload.Devices[0].Mode.options[0], \"_\", limit)[1]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "status.options.sleep",
+                "pt": "msg",
+                "to": "$split(payload.Devices[0].Mode.options[1], \"_\", limit)[1]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "status.options.autoclean",
+                "pt": "msg",
+                "to": "$split(payload.Devices[0].Mode.options[2], \"_\", limit)[1]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "status.options.spi",
+                "pt": "msg",
+                "to": "$split(payload.Devices[0].Mode.options[3], \"_\", limit)[1]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "status.temperatures.current",
+                "pt": "msg",
+                "to": "payload.Devices[0].Temperatures.current",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "status.temperatures.desired",
+                "pt": "msg",
+                "to": "payload.Devices[0].Temperatures.desired",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "status.temperatures.unit",
+                "pt": "msg",
+                "to": "payload.Devices[0].Temperatures.unit",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "status.wind.direction",
+                "pt": "msg",
+                "to": "payload.Devices[0].Wind.direction",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "status.wind.speedLevel",
+                "pt": "msg",
+                "to": "payload.Devices[0].Wind.speedLevel",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 300,
+        "wires": [
+            [
+                "7e18121e.3f746c"
+            ]
+        ]
+    },
+    {
+        "id": "df1de4c3.99c688",
+        "type": "config",
+        "z": "4757eb73.c56844",
+        "name": "device config",
+        "properties": [
+            {
+                "p": "deviceConfig",
+                "pt": "flow",
+                "to": "{\"general\":{\"url\":\"https://192.168.2.50:8888\"},\"commands\":{\"status\":{\"method\":\"GET\",\"url\":\"%base%/devices\"},\"power\":{\"method\":\"PUT\",\"url\":\"%base%/devices/0\",\"availableValues\":[\"On\",\"Off\"],\"template\":\"{\\\"Operation\\\" : { \\\"power\\\" : \\\"%value%\\\" }}\"},\"mode\":{\"method\":\"PUT\",\"url\":\"%base%/devices/0/mode\",\"availableValues\":[\"Cool\",\"Dry\",\"Wind\",\"Auto\"],\"template\":\"{\\\"Mode\\\" : { \\\"modes\\\" : [\\\"%value%\\\"] }}\"},\"opt_comode\":{\"method\":\"PUT\",\"url\":\"%base%/devices/0\",\"availableValues\":[\"Off\",\"Sleep\",\"Speed\",\"2Step\",\"Comfort\",\"Quiet\",\"Smart\"],\"template\":\"{\\\"Mode\\\" : { \\\"options\\\" : [\\\"Comode_%value%\\\"] }}\"},\"opt_clean\":{\"method\":\"PUT\",\"url\":\"%base%/devices/0\",\"availableValues\":[\"On\",\"Off\"],\"template\":\"{\\\"Mode\\\" : { \\\"options\\\" : [\\\"Sleep_%value%\\\"] }}\"},\"opt_purify\":{\"method\":\"PUT\",\"url\":\"%base%/devices/0\",\"availableValues\":[\"On\",\"Off\"],\"template\":\"{\\\"Mode\\\" : { \\\"options\\\" : [\\\"Spi_%value%\\\"] }}\"},\"temp_desired\":{\"method\":\"PUT\",\"url\":\"%base%/devices/0/temperatures/0\",\"template\":\"{\\\"Temperatures\\\" : [{ \\\"desired\\\" : %value% }]}\"},\"temp_unit\":{\"method\":\"PUT\",\"url\":\"%base%/devices/0/temperatures/0\",\"availableValues\":[\"Celsius\",\"Fahrenheit\"],\"template\":\"{\\\"Temperatures\\\" : [{ \\\"unit\\\" : \\\"%value%\\\" }]}\"},\"wind_direction\":{\"method\":\"PUT\",\"url\":\"%base%/devices/0/wind\",\"availableValues\":[\"Fix\",\"UpAndLow\",\"LeftAndRight\",\"All\"],\"template\":\"{\\\"Wind\\\" : { \\\"direction\\\" : \\\"%value%\\\" }}\"},\"wind_speed\":{\"method\":\"PUT\",\"url\":\"%base%/devices/0/wind\",\"availableValues\":[{\"Auto\":0},{\"Low\":1},{\"Medium\":2},{\"High\":3},{\"Turbo\":4}],\"template\":\"{\\\"Wind\\\" : { \\\"speedLevel\\\" : %value% }}\"}}}",
+                "tot": "json"
+            }
+        ],
+        "active": true,
+        "x": 170,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "fd8de2bc.fe5b",
+        "type": "comment",
+        "z": "4757eb73.c56844",
+        "name": "manual entry",
+        "info": "",
+        "x": 170,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "bc047c1b.f2952",
+        "type": "inject",
+        "z": "4757eb73.c56844",
+        "name": "",
+        "topic": "",
+        "payload": "status",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "e19f98f4.7b28f8"
+            ]
+        ]
+    },
+    {
+        "id": "e19f98f4.7b28f8",
+        "type": "function",
+        "z": "4757eb73.c56844",
+        "name": "parse command",
+        "func": "let deviceConfig = flow.get('deviceConfig');\nlet baseUrl = deviceConfig.general.url;\nlet command = msg.payload.split(\"|\")[0];\nlet commandValue = msg.payload.split(\"|\").length > 1 ? msg.payload.split(\"|\")[1] : undefined;\n\nlet method = deviceConfig.commands[command].method;\nlet payload;\n\nif (commandValue && method === \"PUT\") {\n    // probably need to add check if value is correct\n    payload = deviceConfig.commands[command].template.replace(\"%value%\", commandValue);\n}\n\nmsg.method = method;\nmsg.url = deviceConfig.commands[command].url.replace(\"%base%\", baseUrl);\nmsg.payload = payload;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 480,
+        "y": 300,
+        "wires": [
+            [
+                "ee60ce9.f1af03"
+            ]
+        ]
+    },
+    {
+        "id": "59c2a787.d129c8",
+        "type": "inject",
+        "z": "4757eb73.c56844",
+        "name": "",
+        "topic": "",
+        "payload": "power|On",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 160,
+        "y": 240,
+        "wires": [
+            [
+                "e19f98f4.7b28f8"
+            ]
+        ]
+    },
+    {
+        "id": "efa66756.710ee8",
+        "type": "inject",
+        "z": "4757eb73.c56844",
+        "name": "",
+        "topic": "",
+        "payload": "power|Off",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 160,
+        "y": 280,
+        "wires": [
+            [
+                "e19f98f4.7b28f8"
+            ]
+        ]
+    },
+    {
+        "id": "55cb7a0d.7acb44",
+        "type": "inject",
+        "z": "4757eb73.c56844",
+        "name": "",
+        "topic": "",
+        "payload": "mode|Cool",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 160,
+        "y": 320,
+        "wires": [
+            [
+                "e19f98f4.7b28f8"
+            ]
+        ]
+    },
+    {
+        "id": "b7df9d6.4b01c6",
+        "type": "inject",
+        "z": "4757eb73.c56844",
+        "name": "",
+        "topic": "",
+        "payload": "mode|Auto",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 160,
+        "y": 360,
+        "wires": [
+            [
+                "e19f98f4.7b28f8"
+            ]
+        ]
+    },
+    {
+        "id": "b12619cf.8987f8",
+        "type": "inject",
+        "z": "4757eb73.c56844",
+        "name": "",
+        "topic": "",
+        "payload": "temp_desired|23",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 180,
+        "y": 400,
+        "wires": [
+            [
+                "e19f98f4.7b28f8"
+            ]
+        ]
+    },
+    {
+        "id": "8e522116.aa688",
+        "type": "inject",
+        "z": "4757eb73.c56844",
+        "name": "",
+        "topic": "",
+        "payload": "wind_speed|2",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 170,
+        "y": 440,
+        "wires": [
+            [
+                "e19f98f4.7b28f8"
+            ]
+        ]
+    }
+]

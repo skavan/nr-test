@@ -1,0 +1,12 @@
+{
+    "name": "autobot",
+    "description": "Self defining device control",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "flows.json",
+            "credentialsFile": "flows_cred.json"
+        }
+    }
+}
